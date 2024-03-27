@@ -1,3 +1,4 @@
+//完成コード
 
 package bases;
 
@@ -5,6 +6,8 @@ package bases;
 public abstract class Living {
 
 	// フィールド
+//	これはフィールド変数。
+//	属性を表す変数
 	protected String name; // キャラクターの名前
 	protected String weapon; // 武器名
 	protected int hp; // ヒットポイント（生命力）
@@ -63,3 +66,29 @@ public abstract class Living {
 	}
 
 }
+
+
+
+
+コンストラクタとは
+クラスのインスタンス生成時に実行されるメソッド。
+コンストラクタとは、メソッド
+条件がある。
+インスタンス生成時に実行される。
+クラスからインスタンスを生成した時に最初に実行されるメソッド
+
+インスタンス
+クラスをもとに生成された実体(オブジェクト)の事。
+
+
+
+
+
+
+
+
+
+
+
+
+
