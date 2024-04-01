@@ -3,6 +3,7 @@
 package humans;
 
 import bases.Human;
+import utils.Dice;
 
 public class Fighter extends Human {
 	
@@ -10,8 +11,6 @@ public class Fighter extends Human {
 		super(name, weapon);
 	}
 	
-	
-	super.hp = Dice.get(240, 300);
-	super.offensive = Dice.get(17, 23);
-	
+	public int hp2 = Dice.get(240, 300);
+	public int offensive2 = Dice.get(17, 23);
 }

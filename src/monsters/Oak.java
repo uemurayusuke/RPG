@@ -4,6 +4,7 @@
 package monsters;
 
 import bases.Monster;
+import utils.Dice;
 
 public class Oak extends Monster {
 	
@@ -12,8 +13,8 @@ public class Oak extends Monster {
 	}
 	
 	
-	super.hp = Dice.get(170, 230);
-	super.offensive = Dice.get(9, 15);
+	public int hp5 = Dice.get(170, 230);
+	public int offensive5 = Dice.get(9, 15);
 	
 	
 }

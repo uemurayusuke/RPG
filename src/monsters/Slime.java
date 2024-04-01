@@ -3,6 +3,7 @@
 package monsters;
 
 import bases.Monster;
+import utils.Dice;
 
 public class Slime extends Monster {
 	
@@ -10,7 +11,7 @@ public class Slime extends Monster {
 		super(name, weapon);
 	}
 	
-	super.hp = Dice.get(70, 130);
-	super.offensive = Dice.get(5, 11);
+	public int hp4 = Dice.get(70, 130);
+	public int offensive4 = Dice.get(5, 11);
 	
 }

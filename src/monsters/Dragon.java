@@ -3,6 +3,7 @@
 package monsters;
 
 import bases.Monster;
+import utils.Dice;
 
 public class Dragon extends Monster {
 	
@@ -11,8 +12,8 @@ public class Dragon extends Monster {
 	}
 	
 	
-	super.hp = Dice.get(270, 330);
-	super.offensive = Dice.get(12, 18);
+	public int hp6 = Dice.get(270, 330);
+	public int offensive6 = Dice.get(12, 18);
 	
 	
 }
