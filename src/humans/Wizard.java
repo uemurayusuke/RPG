@@ -1,14 +1,13 @@
+
+
 package humans;
 
-public class Wizard {
+import bases.Human;
 
+public class Wizard extends Human {
+	
+	public Wizard(String name, String weapon) {
+		super(name, weapon);
+	}
 }
-
-
-//戻り値
-//メソッド内の処理後、呼び出し元に返す値のこと
-//戻り値があるメソッド
-//呼び出された時に呼び出し元に「この値を使って処理を進めてください!」と値を渡してあげるイメージ
-//戻り値を返さない場合は、voidを使用する。
-//return文が実行された時点で、メソッドを終了し、呼び出し元へ処理が帰ります。
 

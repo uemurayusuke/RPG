@@ -1,22 +1,22 @@
 
 package bases;
 
-//抽象クラスを定義します
-//継承してます。サブクラスです
+import utils.Dice;
+
 public abstract class Human extends Living {
 
-	// コンストラクタ
-//	nameとweponは親クラスに情報
 	public Human(String name, String weapon) {
-		// Livingクラスで定義したコンストラクタを利用する
+		super(name, weapon);
 	}
 	
-	// attackメソッドのオーバーライド
-//	オーバーライドという事は、attackメソッドは親クラスで定義されているメソッドです。
+	
 	@Override
-//	Living型とは、Livingはクラス名です。
+//	引数の中身が攻撃する相手
 	public void attack(Living target) {
-//		引数の中身が攻撃する相手
+		
+//		1から10までのサイコロを振る
+		int damage = Dice.get(1, 10)*this.offensive;		
+//		offensiveが攻撃力
 		
 		// 1から10までのサイコロを振り、自分の攻撃力とかけ合わせた値を相手に与えるダメージとする
 //		サイコロの出た数字 × 攻撃力 = ダメージ
@@ -37,4 +37,6 @@ public abstract class Human extends Living {
 	}
 }
 
+
+//Livingで定義したコンストラクタを利用するとはどういう事ですか？
 

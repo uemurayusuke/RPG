@@ -1,7 +1,15 @@
+
+
 package humans;
 
-public class Brave {
+import bases.Human;
 
+public class Brave extends Human {
+	
+	public Brave(String name, String weapon) {
+//		superが親クラスのコンストラクタを意味してる
+		super(name, weapon);
+	}
 }
 
 
@@ -14,4 +22,6 @@ public class Brave {
 //HPと攻撃力の乱数範囲は決められています
 
 //人間とモンスターの名前と武器はそれぞれ決まっている。
+
+
 

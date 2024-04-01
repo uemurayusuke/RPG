@@ -1,5 +1,12 @@
+
+
 package monsters;
 
-public class Dragon {
+import bases.Monster;
 
+public class Dragon extends Monster {
+	
+	public Dragon(String name, String weapon) {
+		super(name, weapon);
+	}
 }

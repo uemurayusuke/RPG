@@ -1,17 +1,13 @@
-//完成コード
 
 package bases;
 
-//生物を表現する抽象クラス
 public abstract class Living {
 
-	// フィールド
-//	これはフィールド変数。
-//	属性を表す変数
-	protected String name; // キャラクターの名前
-	protected String weapon; // 武器名
-	protected int hp; // ヒットポイント（生命力）
-	protected int offensive; // 攻撃力
+	protected String name; 
+	protected String weapon; 
+	protected int hp; 
+//	攻撃力
+	protected int offensive; 
 
 	// コンストラクタ
 	public Living(String name, String weapon) {
@@ -52,7 +48,9 @@ public abstract class Living {
 		this.offensive = offensive;
 	}
 
-    // ターゲットに攻撃するメソッド
+   
+//	抽象メソッドでは、処理内容が未定の為、{}を付ける事ができない。
+//	引数にLiving targetが入っているが、これはどういう意味なのか？
 	public abstract void attack(Living target); 
 
 	// 自分自身を表現する文字列のオーバーライド
@@ -70,33 +68,28 @@ public abstract class Living {
 
 
 
-//コンストラクタとは
-//クラスのインスタンス生成時に実行されるメソッド。
-//コンストラクタとは、メソッド
-//条件がある。
-//インスタンス生成時に実行される。
-//クラスからインスタンスを生成した時に最初に実行されるメソッド
-//
-//インスタンス
-//クラスをもとに生成された実体(オブジェクト)の事。
+
+//javaで型としてクラスを使用するのはなぜ？
 
 
-//抽象メソッド
-//具体的な処理内容を記述せず、メソッド名や引数だけの定義だけを宣言するメソッド
-//抽象メソッドは先頭に「abstract」をつける事で定義できる。
-//抽象メソッドは、そのままでは利用できない。
-//サブクラスでオーバーライドしないいけない。
 
-//抽象メソッドは、
-//複数人で開発する時にメリットがあるらしい。
-//抽象メソッドの性質は、サブクラスに記述がないとエラーになるという事。
-//この性質を利用して、他の人の記述漏れを防ぐみたいなニュアンスで使用するらしい。
 
-//@Override
-//これはアノテーションと呼ばれる。
-//アノテーションとは、オーバーライドすることを宣言するために記述する。
-//これを記述することで、もしスーパークラスに同名のメソッドがなければコンパイラが
-//エラーメッセージを出す。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
