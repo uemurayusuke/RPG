@@ -3,7 +3,6 @@
 package humans;
 
 import bases.Human;
-import utils.Dice;
 
 public class Brave extends Human {
 	
@@ -11,23 +10,16 @@ public class Brave extends Human {
 		super(name, weapon);
 	}
 	
-	super.hp = Dice.get(170, 230);
-	super.offensive = Dice.get(7, 13);
 	
-	
+	super.hp = Dice.get(240, 300);
+	super.offensive = Dice.get(17, 23);
 	
 }
 
 
-//Humanを継承する
-//引数にname,weaponの2つだけを持つコンストラクタを定義
-//name,weaponの値を設定するために、Humanクラスに定義したコンストラクタを利用
 
-//monsterも同じです。
 
-//HPと攻撃力の乱数範囲は決められています
 
-//人間とモンスターの名前と武器はそれぞれ決まっている。
 
 
 

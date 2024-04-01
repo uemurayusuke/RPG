@@ -12,28 +12,31 @@ public class Main {
 	public static void main(String[] args) {
 
 		System.out.println("★★ ==== 戦いの開始だ！！ ==== ★★");
+		
+		Human brave = new Human("沖田総司", "剣");
+		Human fighter = new Human("金太郎", "斧");
+		Human wizard = new Human("安倍晴明", "魔法");
 
-		// Brave（勇者）, Fighter（戦士）, Wizard（魔法使い）クラスの各インスタンスを生成
-
-		// 人間グループのリストを空で生成
 		List<Human> humans = new ArrayList<>();
-        
-		// 勇者、戦士、魔法使いを人間グループのリストに追加
+		
+		humans.add(brave);
+		humans.add(fighter);
+		humans.add(wizard);
+		
+		Monster slime = new Monster("キングスライム", "体当たり");
+		Monster oak = new Monster("オークキング", "槍");
+		Monster dragon = new Monster("紅龍", "炎");
 
-		// Slime（スライム）, Oak（オーク）, Dragon（ドラゴン）クラスの各インスタンスを生成
-
-		// モンスターグループのリストを空で生成
 		List<Monster> monsters = new ArrayList<>();
 		
-        // スライム、オーク、ドラゴンをモンスターグループのリストに追加
+		monsters.add(slime);
+		monsters.add(oak);
+		monsters.add(dragon);
 
-		// 現在の各グループの状態を一覧表示
 		showGroupInfos(humans, monsters);
 
-		// 第何回戦かを示すカウンター変数
 		int count = 1;
 		
-		// 勝敗がつくまで無限ループ
 		while (true) {
 
 			System.out.printf("\n★ 第%d回戦 ==========\n", count);
