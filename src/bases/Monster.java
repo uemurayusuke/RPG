@@ -1,30 +1,23 @@
 
 package bases;
 
-//抽象クラス
-//サブクラス
+import utils.Dice;
+
 public abstract class Monster extends Living {
 
-	// コンストラクタ
+
 	public Monster(String name, String weapon) {
-		// Livingクラスで定義したコンストラクタを利用する
+	  super(name, weapon);
 	}
 
-	// attackメソッドのオーバーライド
-//	親クラスのメソッドを使用
 	@Override
 	public void attack(Living target) {
-		// 1から10までのサイコロを振り、自分の攻撃力とかけ合わせた値を相手に与えるダメージとする
 		
-		// 相手のHPをダメージ値だけ減らす
+		int damage = Dice.get(1, 10) * getOffensive();	
 		
-		// コンソールにステータスを表示
-//		　「〇〇」が「✕✕」で攻撃！「△△」に▲▲のダメージを与えた。
-//		〇〇はモンスターの名前
-//		✕✕はモンスターの武器
-//		△△は人間の名前
-//		▲▲はダメージ値
-//		モンスターに関しては、攻撃力が下がらない
+		super.hp = target.getHp() - damage;
+		
+		System.out.println("「" + name + "」が「" + weapon + "」で攻撃!「" + target + "」に" + damage + "のダメージを与えた。");
 	}
 }
 

@@ -69,7 +69,8 @@ public abstract class Living {
 
 
 
-//javaで型としてクラスを使用するのはなぜ？
+
+
 
 
 
