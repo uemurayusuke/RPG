@@ -6,20 +6,18 @@ public abstract class Living {
 	protected String name; 
 	protected String weapon; 
 	protected int hp; 
-//	攻撃力
 	protected int offensive; 
 
-	// コンストラクタ
 	public Living(String name, String weapon) {
 		this.name = name;
 		this.weapon = weapon;
 	}
 
-	// ゲッター、セッター
 	public String getName() {
 		return name;
 	}
 
+//	引数で入れたnameを入れるという事
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -28,6 +26,7 @@ public abstract class Living {
 		return weapon;
 	}
 
+//	引数で入れたweaponを入れるという事
 	public void setWeapon(String weapon) {
 		this.weapon = weapon;
 	}
@@ -36,14 +35,17 @@ public abstract class Living {
 		return hp;
 	}
 
+//	引数で入れたhpを入れるという事
 	public void setHp(int hp) {
 		this.hp = hp;
 	}
 
+//	別のクラスで代入していいって事よね？
 	public int getOffensive() {
 		return offensive;
 	}
 
+//	引数で入れたoffensiveを入れるという事
 	public void setOffensive(int offensive) {
 		this.offensive = offensive;
 	}
@@ -64,39 +66,6 @@ public abstract class Living {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

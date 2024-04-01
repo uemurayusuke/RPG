@@ -12,6 +12,7 @@ public abstract class Human extends Living {
 	
 	@Override
 //	引数の中身が攻撃する相手
+//	実際に使用する時は攻撃する相手の情報が入った変数を入れればいい。
 	public void attack(Living target) {
 //		offensiveが攻撃力
 		int damage = Dice.get(1, 10) * getOffensive();	

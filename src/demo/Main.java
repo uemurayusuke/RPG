@@ -42,37 +42,44 @@ public class Main {
 			System.out.printf("\n★ 第%d回戦 ==========\n", count);
 
 			System.out.println("\n[人間のターン！]\n");
-
-			// 人間グループから1人選択
 			
-			// モンスターグループから1人選択
+			Main.choiceHuman(humans);
+			
+			Main.choiceMonster(monsters);
             
-			// 選ばれた人間が、選ばれたモンスターを攻撃
+			attack();
 			
-			// モンスターのHPが0以下になれば、モンスターは倒れ、そのモンスターをモンスターグループから削除
+			if (hp <= 0) {
+				System.out.println("「" +   + "」は倒れた。");
+				monsters.remove()
+			}
+		
 
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
 
 			System.out.println("\n[モンスターのターン！]\n");
 			
-			// 人間グループから1人選択
+			Main.choiceHuman(humans);
 			
-			// モンスターグループから1人選択
+			Main.choiceMonster(monsters);
 			
-			// 選ばれたモンスターが、選ばれた人間を攻撃
-
+			attack();
+		
 			// 人間のHPが0以下になれば、人間は倒れ、その人間をモンスターグループから削除
+			if (hp <= 0) {
+				System.out.println("「" +   + "」は倒れた。");
+				humans.remove()
+			}
+			
 
 			// 人間グループに誰もいなくなれば、人間グループの敗北
 			
-			// 現在の各グループの状態を一覧表示
+		
 			showGroupInfos(humans, monsters);
 			
-			// ループ変数を1増やす
 			count++;
 		}
 
-		// 最後に各グループの状態を一覧表示してプログラム終了
 		showGroupInfos(humans, monsters);
 
 	}
